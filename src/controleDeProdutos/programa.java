@@ -22,8 +22,16 @@ public class programa {
 			String nome = in.nextLine();
 			float preço = in.nextFloat();
 			prod[i] = new Produto(nome, preço);
-
 		}
+		
+		float soma = 0;
+		
+		for (int i = 0; i < prod.length; i++) {
+			soma+= prod[i].getPreço();
+		} float media = soma/prod.length;
+		
+		System.out.println("a media é: "); System.out.printf("%.2f%n", media);
+		
 
 		in.close();
 	}
